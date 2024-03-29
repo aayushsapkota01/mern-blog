@@ -27,7 +27,7 @@ const SignIn = () => {
     if (!formData.email || !formData.password) {
       dispatch(signInFailure("Please fill out all the fields !"));
       setTimeout(() => {
-        dispatch(signInFailure());
+        dispatch(signInFailure(null));
       }, 2000);
       return;
     }

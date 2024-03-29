@@ -33,19 +33,19 @@ export const signin = async (req, res, next) => {
 
   try {
     if (!email || !password || email.trim() === "" || password.trim() === "") {
-      throw errorHandler(400, "All Fields Are Required !");
+      return errorHandler(400, "All Fields Are Required !");
     }
 
     const validUser = await User.findOne({ email });
 
     if (!validUser) {
-      throw errorHandler(404, "User Not Found !!");
+      return errorHandler(404, "User Not Found !!");
     }
 
     const validPassword = bcryptjs.compareSync(password, validUser.password);
 
     if (!validPassword) {
-      throw errorHandler(400, "Wrong Credentials");
+      return errorHandler(400, "Wrong Credentials");
     }
 
     const { password: pass, ...rest } = validUser._doc;
