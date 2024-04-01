@@ -69,7 +69,7 @@ const SignIn = () => {
             </span>
             Blog
           </Link>
-          <p className="mt-5 text-sm">
+          <p className="mt-5 text-sm dark:text-white">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
             dolores sint aspernatur expedita sequi. Voluptatibus dicta et hic
             aspernatur maxime recusandae architecto? Minus, necessitatibus.
@@ -77,8 +77,8 @@ const SignIn = () => {
         </div>
 
         {/* -------- Right ---------- */}
-        <div className="flex-1">
-          <h1 className="font-base mb-10 hidden text-center text-5xl md:block">
+        <div className="flex-1 dark:text-white">
+          <h1 className="font-base mb-10 hidden text-center text-5xl md:block ">
             Sign In
           </h1>
 
@@ -122,9 +122,12 @@ const SignIn = () => {
           </form>
 
           {/* Sign In Link */}
-          <div className="mt-3 flex gap-2 text-sm">
+          <div className="mt-3 flex gap-2 text-sm ">
             <span>Don&apos;s have an account?</span>
-            <Link to="/sign-up" className="text-blue-800 underline">
+            <Link
+              to="/sign-up"
+              className="text-blue-800 underline dark:text-white"
+            >
               Sign Up
             </Link>
           </div>
